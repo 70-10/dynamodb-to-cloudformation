@@ -1,0 +1,27 @@
+{
+  "name": "dynamodb-to-cloudformation",
+  "description": "DynamoDB Table to CloudFormation",
+  "version": "0.1.0",
+  "author": "70_10",
+  "bin": {
+    "dtc": "index.js"
+  },
+  "bugs": {
+    "url": "https://github.com/70-10/dynamodb-to-cloudformation/issues"
+  },
+  "homepage": "https://github.com/70-10/dynamodb-to-cloudformation#readme",
+  "keywords": [],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/70-10/dynamodb-to-cloudformation.git"
+  },
+  "scripts": {},
+  "dependencies": {
+    "aws-sdk": "2.7.10",
+    "co": "4.6.0",
+    "commander": "2.9.0",
+    "lodash.clonedeep": "4.5.0"
+  }
+}
