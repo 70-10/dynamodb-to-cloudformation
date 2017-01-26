@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+"use strict";
 
 const AWS = require("./aws");
 const co = require("co");
@@ -22,9 +23,10 @@ co(get(program.args[0])).catch(e => console.error(e.message));
 function *get(tableName) {
   const DynamoDB = new AWS.DynamoDB();
 
-  const {Table} = yield DynamoDB.describeTable({
+  const r = yield DynamoDB.describeTable({
     TableName: tableName,
   }).promise();
+  const Table = r.Table;
 
   const result = shaping(Table);
   console.log(JSON.stringify(result, null, 2));
